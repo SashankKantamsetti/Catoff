@@ -35,6 +35,9 @@ export class AppModule { }*/
       database: process.env.POSTGRES_DATABASE,
       autoLoadEntities: true,
       synchronize: true,
+      ssl: {
+        rejectUnauthorized: false
+      },
     }),
     UsersModule,
     WalletAddressModule,
